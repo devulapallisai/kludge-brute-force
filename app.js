@@ -23,10 +23,9 @@ app.post("/postpassword", (req, res) => {
   const { username, password } = req.body;
   console.log(username, password);
   if (password === correctpassword) {
-    res.redirect("/admin");
-  } else {
-    res.redirect("/");
+    res.redirect(200, "/admin");
   }
+  res.redirect(400, "/");
 });
 
 app.listen(PORT, () => {
