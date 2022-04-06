@@ -28,12 +28,13 @@ app.post("/postpassword", (req, res) => {
       .send(
         '<!DOCTYPE html><html><head><meta http-equiv="refresh" content="0; url=/admin"></head></html>'
       );
+  } else {
+    res
+      .status(400)
+      .send(
+        '<!DOCTYPE html><html><head><meta http-equiv="refresh" content="0; url=/"></head></html>'
+      );
   }
-  res
-    .status(400)
-    .send(
-      '<!DOCTYPE html><html><head><meta http-equiv="refresh" content="0; url=/"></head></html>'
-    );
 });
 
 app.listen(PORT, () => {
