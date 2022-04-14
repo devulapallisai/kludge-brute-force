@@ -15,7 +15,7 @@ def bruteCracking(username, url, error):
         count = count + 1
         # print("Trying Password: " + str(count) + ' Time For => ' + password)
         if(count == 16000):
-            time.sleep(2)
+            time.sleep(1)
             count = 0
         data_dict = {"username": username,
                      "password": password}
@@ -30,7 +30,7 @@ def bruteCracking(username, url, error):
         text = " request to host: http://localhost:5000/ " + \
             " username: " + username + " password: " + password + \
             " response status code is "+str(response.status_code)
-        print(colored(text, 'red'))
+        print(count, colored(text, 'red'))
 # except:
 #     print("Some Error Occurred Please Check Your Internet Connection !!")
 
