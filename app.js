@@ -19,9 +19,9 @@ app.get("/admin", (req, res) => {
   res.render("./loggedin");
 });
 app.post("/postpassword", (req, res) => {
-  const correctpassword = "correct";
+  const correctpassword = "dude92";
   const { username, password } = req.body;
-  console.log(username, password);
+  // console.log(username, password);
   if (password === correctpassword) {
     res
       .status(200)
